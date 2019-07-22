@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Un Jugador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div class="centrado">
+    <ion-button color="secondary" ion-button round (click)="clickedStar();dadobot1();dadobot2();dadobot3()"> Lanzar dado</ion-button>
+
+
+</div>
+<p>Jugador Uno</p> <ion-icon name="man"></ion-icon>
+<ion-progress-bar   class="progress-bar" color="success" [value]="jugador"><ion-icon name="men"></ion-icon></ion-progress-bar>
+
+<p>Jugador Dos</p> <ion-icon name="man"></ion-icon>
+<ion-progress-bar class="progress-bar" color="success" [value]="bot1"></ion-progress-bar>
+
+<p>Jugador Tres</p> <ion-icon name="man"></ion-icon>
+<ion-progress-bar  class="progress-bar" color="success" [value]="bot2"></ion-progress-bar>
+
+<p>Jugador Cuatro</p> <ion-icon name="man"></ion-icon>
+<ion-progress-bar class="progress-bar" color="success"  [value]="bot3"></ion-progress-bar>
+
+<div class="centrado">   
+    <p>{{ganador}} </p>
+   
+
+
+    <ion-button color="secondary" ion-button round  (click)="limpiar()" >Jugar de nuevo</ion-button>
+    <ion-button color="secondary"ion-button round  routerLink="/home"  >Salir</ion-button>
+
+  
+
+</div>
+
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tres Jugadores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+
+<div>
+    <p>  Turno del jugador {{turno}}  </p> 
+
+   
+    
+  
+    <ion-button color="secondary"  ion-button round (click)="clickedStar()"> Jugador Uno </ion-button>
+    <ion-button color="secondary"  ion-button round (click)="dadobot1();"> Jugador Dos</ion-button>
+    <ion-button color="secondary"  ion-button round (click)="dadobot2();dadobot3()">Jugador Tres </ion-button>
+    
+
+
+</div>
+<p>Jugador 1</p> <ion-icon name="man"></ion-icon>
+<ion-progress-bar   class="progress-bar" color="success" [value]="jugador"><ion-icon name="men"></ion-icon></ion-progress-bar>
+
+<p>Jugador 2</p> <ion-icon name="man"></ion-icon>
+<ion-progress-bar class="progress-bar" color="success" [value]="bot1"></ion-progress-bar>
+
+<p>Jugador 3</p> <ion-icon name="man"></ion-icon>
+<ion-progress-bar  class="progress-bar" color="success" [value]="bot2"></ion-progress-bar>
+
+<p>Jugador 4</p> <ion-icon name="man"></ion-icon>
+<ion-progress-bar class="progress-bar" color="success"  [value]="bot3"></ion-progress-bar>
+
+<div class="centrado">   
+    <p>{{ganador}} </p>
+   
+
+
+    <ion-button color="secondary" ion-button round  (click)="limpiar()" >Jugar de nuevo</ion-button>
+    <ion-button color="secondary" ion-button round  routerLink="/home"  >Salir</ion-button>
+
+  
+
+</div>
+
+</ion-content>
